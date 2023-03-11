@@ -10,6 +10,7 @@ public class EmpDataWages {
 
 
 
+
   public EmpDataWages(String company, int emp_WagePerHour, int emp_TotalWorkingHrs, int emp_WorkingDaysPerMonth){
       this.company=company;
       this.emp_WagePerHour= emp_WagePerHour;
@@ -17,14 +18,19 @@ public class EmpDataWages {
       this.emp_WorkingDaysPerMonth= emp_WorkingDaysPerMonth;
 
   }
+
+    public String getCompany() {
+        return company;
+    }
+
     public void CalulateTotalWages() {
         System.out.println("Welcome to the Employee Wages: ");
 
         int empHrs=0;
-        int empWagePerMonth = 20;
+        int empWagePerMonth = 0;
         int empTotalHrs = 0;
         int empTotalWorkingDays = 0;
-        System.out.println("Details of " +company+ "employee");
+        System.out.println("Details of " +company+ " employee");
         System.out.println("emp_WagePerHour "+emp_WagePerHour);
         System.out.println("Total working days "+empTotalWorkingDays);
         System.out.println("Total working hours "+empTotalHrs);
@@ -52,9 +58,14 @@ public class EmpDataWages {
     }
         int empWagePerDay = empHrs * empTotalHrs;
         empWagePerMonth = emp_WorkingDaysPerMonth * empWagePerDay;
-        System.out.println("Emp WagePerDay: " + empWagePerDay);
-        System.out.println("Emp WagesPerMonth: " + empWagePerMonth);
+       // System.out.println("Emp WagePerDay: " + empWagePerDay);
+        //System.out.println("Emp WagesPerMonth: " + empWagePerMonth);
+        System.out.println("Total Working Hours for " + company + " company " + empHrs + " And total working Hours " + emp_WorkingDaysPerMonth);
+        System.out.println("total Working days " + empTotalWorkingDays + " working hours " + empTotalHrs + " Wage Per Day is: " +empWagePerDay);
+        System.out.println();
+        System.out.println("Total wages of :" + company+ " company is "+ empWagePerMonth);
     }
+
     public String toString(){
       return super.toString();
     }
