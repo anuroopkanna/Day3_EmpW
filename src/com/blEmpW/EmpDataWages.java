@@ -1,16 +1,18 @@
 package com.blEmpW;
 
 public class EmpDataWages {
-   private static final int emp_FullTime=1;
-    private  static final int emp_PartTime=2;
+   public static final int emp_FullTime=1;
+    public   static final int emp_PartTime=2;
+
     private final String company;
     private final int emp_WagePerHour;
     private final int emp_TotalWorkingHrs;
     private final int emp_WorkingDaysPerMonth;
-
-
-
-
+    int sal,id,total_sal;
+    String name;
+    private void sal(int sal){
+        total_sal=sal*12;
+    }
   public EmpDataWages(String company, int emp_WagePerHour, int emp_TotalWorkingHrs, int emp_WorkingDaysPerMonth){
       this.company=company;
       this.emp_WagePerHour= emp_WagePerHour;
@@ -18,10 +20,6 @@ public class EmpDataWages {
       this.emp_WorkingDaysPerMonth= emp_WorkingDaysPerMonth;
 
   }
-
-    public String getCompany() {
-        return company;
-    }
 
     public void CalulateTotalWages() {
         System.out.println("Welcome to the Employee Wages: ");
@@ -69,6 +67,12 @@ public class EmpDataWages {
     public String toString(){
       return super.toString();
     }
+    public void display(){
+        System.out.println("Name of the employee:" +name);
+        System.out.println("Total sal of the employee: " +total_sal);
+        System.out.println("Id of the employee: " +id);
+    }
+
 
     public static void main(String[] args) {
        EmpDataWages e =new EmpDataWages("Tesla",20,4,10);
