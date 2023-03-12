@@ -81,14 +81,13 @@ public class EmpDataWages {
 
     public static void main(String[] args) {
        EmpDataWages Tesla =new EmpDataWages("Tesla",20,4,10);
-
-        EmpDataWages Infosys  = new EmpDataWages("Infosys",40,5,20);
+        EmpDataWages Microsoft  = new EmpDataWages("Microsoft",40,5,20);
         EmpDataWages Tata = new EmpDataWages("Tata",45,6,20);
          Tesla.CalulateTotalWages();
         System.out.println(Tesla);
         System.out.println();
-        Infosys.CalulateTotalWages();
-        System.out.println(Infosys);
+        Microsoft.CalulateTotalWages();
+        System.out.println(Microsoft);
         System.out.println();
         Tata.CalulateTotalWages();
         System.out.println(Tata);
