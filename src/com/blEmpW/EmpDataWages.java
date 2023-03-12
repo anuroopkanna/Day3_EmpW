@@ -1,5 +1,7 @@
 package com.blEmpW;
 
+import java.util.Scanner;
+
 public class EmpDataWages {
    public static final int emp_FullTime=1;
     public   static final int emp_PartTime=2;
@@ -59,7 +61,7 @@ public class EmpDataWages {
        // System.out.println("Emp WagePerDay: " + empWagePerDay);
         //System.out.println("Emp WagesPerMonth: " + empWagePerMonth);
         System.out.println("Total Working Hours for " + company + " company " + empHrs + " And total working Hours " + emp_WorkingDaysPerMonth);
-        System.out.println("total Working days " + empTotalWorkingDays + " working hours " + empTotalHrs + " Wage Per Day is: " +empWagePerDay);
+        System.out.println("total Working days: " + empTotalWorkingDays + " working hours: " + empTotalHrs + " Wage Per Day is: " +empWagePerDay);
         System.out.println();
         System.out.println("Total wages of :" + company+ " company is "+ empWagePerMonth);
     }
@@ -88,5 +90,15 @@ public class EmpDataWages {
         e2.CalulateTotalWages();
         System.out.println(e2);
         System.out.println();
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name of emp: ");
+        e.name=sc.next();
+        System.out.println("Enter the Salary of emp: ");
+        e.sal=sc.nextInt();
+        System.out.println("Enter the id of employee: ");
+        e.id=sc.nextInt();
+        e.sal(e.sal);
+        e.display();
     }
 }
